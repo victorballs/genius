@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.5">  
+  <title>Genius Game</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+  <audio id="red-sound" src="red.m4a"></audio>
+  <audio id="green-sound" src="green.m4a"></audio>
+  <audio id="blue-sound" src="blue.m4a"></audio>
+  <audio id="yellow-sound" src="yellow.m4a"></audio>
+  <audio id="mozart-song" src="./Mozart.m4a"></audio>
+  <h1 id="title">Genius</h1>
+  <div id="game-board">
+    <div class="color" id="red"></div>
+    <div class="color" id="green"></div>
+    <div class="color" id="blue"></div>
+    <div class="color" id="yellow"></div>
+  </div>
+  <button id="start" onclick="enableLoop(); playSong('mozart-song') " type="button">START GAME</button>
+  <script src="./script.js"></script>
+</body>
+</html>

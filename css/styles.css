@@ -1,0 +1,155 @@
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  grid-template-rows: repeat(2, 150px);
+  gap: 10px;
+}
+
+.color {
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#green { 
+  background: linear-gradient(-45deg, rgb(6, 255, 6), rgb(0, 0, 0));
+	background-size: 400% 400%;
+	animation: gradient-animation 15s ease infinite;
+}
+#red { 
+  background: linear-gradient(-45deg, rgb(253, 0, 0), rgb(0, 0, 0));
+	background-size: 400% 400%;
+	animation: gradient-animation 15s ease infinite; 
+}
+#yellow { 
+  background: linear-gradient(-45deg, rgb(217, 255, 0), rgb(0, 0, 0));
+	background-size: 400% 400%;
+	animation: gradient-animation 15s ease infinite;
+}
+#blue {
+  background: linear-gradient(-45deg, rgb(0, 81, 255), rgb(0, 0, 0));
+	background-size: 400% 400%;
+	animation: gradient-animation 15s ease infinite;
+ }
+
+.active {
+  opacity: 0.6;
+}
+
+@font-face{
+    font-family: 'Pokemon';
+    src: url('../fonts/pokemon-font.ttf') format('truetype');
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+}
+
+.profile-img {
+  border-radius: 50%;
+    height: 100px;
+}
+
+h1{
+  font-family: 'Pokemon';
+  color: white;
+}
+
+html{
+  background: linear-gradient(-45deg, rgb(35, 35, 35), rgb(0, 0, 0));
+	background-size: 400% 400%;
+	animation: gradient-animation 15s ease infinite;
+  font-family: 'Pokemon';
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center ;
+  gap: 180px;
+}
+
+#title{
+  margin-top: 70px;
+  margin-bottom: -70px;
+  color: #b5b5b5a4; /* Adjust this color to change intensity/style */
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+.shiny-text.disabled {
+  animation: none;
+}
+
+#start{
+  font-family: 'Pokemon';
+  font-size: 20px;
+  background-color: white;
+  border: none;
+  width: 50vh;
+  height: 10vh;
+  margin-top: -90px;
+  background: #212121;
+  background-image: -webkit-linear-gradient(top,#212121, #000000);
+  background-image: -moz-linear-gradient(top, #212121, #000000);
+  background-image: -ms-linear-gradient(top, #212121, #000000);
+  background-image: -o-linear-gradient(top, #212121, #000000);
+  background-image: linear-gradient(to bottom, #212121, #212121);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  width: 50vhpx;
+}
+
+#start:hover {
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #000000);
+  background-image: -moz-linear-gradient(top, #000000, #000000);
+  background-image: -ms-linear-gradient(top, #000000, #000000);
+  background-image: -o-linear-gradient(top, #000000, #000000);
+  background-image: linear-gradient(to bottom, #000000, #000000);
+  text-decoration: none;
+}
+
+@media (min-width:320px) and (max-width:425px){
+  html{
+    margin: 0 auto;
+    text-align: center;
+  }
+}
