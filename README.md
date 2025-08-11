@@ -1,2 +1,2 @@
 # genius
-play the memory game genius
+play the memory game "genius"
