@@ -82,9 +82,9 @@ function flashColor(color) {
   // Delay before playing the sound (e.g., 150ms)
   setTimeout(() => {
     playColorSound(color);
-  }, 300);
+  }, 100);
 
-  setTimeout(() => button.classList.remove("active"), 300);
+  setTimeout(() => button.classList.remove("active"), 100);
 }
 
 function handleClick(color) {
@@ -92,3 +92,4 @@ function handleClick(color) {
   flashColor(color); // this already plays the sound
   checkMove(playerSequence.length - 1);
 }
+
